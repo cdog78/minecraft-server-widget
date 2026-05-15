@@ -1,0 +1,9 @@
+body{
+    max-width: 100ch;
+}
+
+a { color:blue } /* Globally */
+
+/* Each state */
+
+a:visited { text-decoration: none; color:blue; }

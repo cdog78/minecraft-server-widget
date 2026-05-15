@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Generate iframe</title>
+        <script src="{{url_for('static', filename='copy.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+
+        {% if prevpage != None %}
+                <a href="{{prevpage}}">Back</a>
+        {% endif %}
+
+        <form action="{{url_for('generateroute')}}", method="post">
+            <label for="url">Server url: </label>
+            <br>
+            <input name="url">
+
+            <button type="submit">Generate</button>
+            
+        </form>
+
+        <br>
+        {% autoescape false %}
+        {{iframe}}
+        {% endautoescape %}
+
+        <br>
+
+        <span class="copyable">
+            <span onclick="copyUrl('{{iframe}}', 'copied iframe html code to clipboard')" class="largetext">{{iframe}}</span>
+        </span>
+        <br>
+    </body>
+</html>

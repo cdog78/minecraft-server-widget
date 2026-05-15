@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+
+body{
+    background-image: url("/static/background.png");
+
+    color: aliceblue;
+
+    font-family: "Micro 5";
+    font-size:larger;
+}
+
+.columncontainer{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 74px 80%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 74px 50ch;
+    
+    /* cursor: pointer; */
+    
+    align-items: self-start;
+    overflow: visible
+}
+
+.motd {
+        display: table-cell;
+    }
+
+.playercount {
+    text-align: right;
+    float: right;
+}
+
+.copyable {
+    cursor: pointer;
+}
+
+.largetext {
+    font-size: x-large;
+}
+

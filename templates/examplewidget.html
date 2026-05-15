@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+        
+        <script src="{{url_for('static', filename='copy.js')}}"></script>
+    <body>
+        <div class="columncontainer" onclick="copyUrl('example.com', 'copied server url to clipboard')">
+            <div class="container">
+            
+                <!-- IMAGE -->
+                <div class="image-container">
+                  <img src="{{url_for('static', filename='pack.png')}}" width="64" height="64"></img>
+                </div>
+
+                <!-- URL AND MOTD -->
+                <div class="info">
+                
+                    <span class="url">example.com</span>
+                    <br>
+                    <span class="motd">EXAMPLE SERVER!</span>
+                    <br>
+                
+                </div>
+
+            </div>
+
+            <div class="playercount">
+                <!-- PLAYERCOUNT -->
+                <span >30 / 45 players online</span>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hi</title>
+        <script src="{{url_for('static', filename='copy.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='homepage.css')}}">
+    </head>
+    <body>
+        <h1>MINECRAFT SERVER WIDGET</h1>
+        <iframe src="/examplewidget" width="350" height="80" scrolling="no" frameborder="0"></iframe>
+        <br>
+        <h3>This project allows minecraft server owners to advertise their server in a flashy, cool way!</h3>
+
+        <h2><u>FEATURES</u></h2>
+        <ul>
+            <li><h4>Shows server icon, motd and url in one simple package</h4></li>
+            <li><h4>Players can click the widget to copy your server IP and start playing with a click!</h4></li>
+            <li><h4><a href="{{url_for('generateroute')}}?prevpage={{url_for('home')}}">User freindly iframe generator</a> to allow easy access to this service</h4></li>
+        </ul>
+
+        <h2><u>ABOUT</u></h2>
+        <h4>This widget was built in python and uses the <a href="https://pypi.org/project/Flask/">flask</a> library for a web server and the <a href="https://pypi.org/project/mcstatus/">mcstatus</a> library to ping minecraft servers. Thanks to the developers of these awesome libraries! The font used is <a href="https://fonts.google.com/specimen/Micro+5?query=micro&preview.script=Latn">Micro 5</a> from Google Fonts.</h4>
+
+        <h2><u>SOURCE CODE</u></h2>
+        <h4>The source code for this project is availiable at </h4>
+        <a href="{{url_for('generateroute')}}?prevpage={{url_for('example')}}">Iframe generator</a>
+    </body>
+</html>

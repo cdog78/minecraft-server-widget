@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hi</title>
+        <script src="{{url_for('static', filename='copy.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <h1>EXAMPLE SERVER</h1>
+        <iframe src="/examplewidget" width="350" height="80" scrolling="no" frameborder="0"></iframe>
+        <br>
+        <h3>Join the server today at the IP above!</h3>
+
+        <a href="{{url_for('generateroute')}}?prevpage={{url_for('example')}}">Iframe generator</a>
+    </body>
+</html>

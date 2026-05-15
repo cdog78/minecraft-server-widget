@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+        
+        <script src="{{url_for('static', filename='copy.js')}}"></script>
+    <body>
+        {% autoescape false %}
+        <div class="columncontainer" onclick="copyUrl('{{url}}', 'copied server url to clipboard')">
+            <div class="container">
+            
+                <!-- IMAGE -->
+                <div class="image-container">
+                  <img src="{{img}}"></img>
+                </div>
+
+                <!-- URL AND MOTD -->
+                <div class="info">
+                
+                    <span class="url" >{{url}}</span>
+                    <br>
+                    <span class="motd">{{motd}}</span>
+                    <br>
+                
+                </div>
+
+            </div>
+
+            <div class="playercount">
+                <!-- PLAYERCOUNT -->
+                <span >{{playercount}} / {{maxplayers}} players online</span>
+            </div>
+        </div>
+
+        {% endautoescape %}
+    </body>
+</html>
