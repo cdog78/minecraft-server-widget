@@ -4,20 +4,7 @@ import json
 
 app = Flask("<3")
 
-widget_templates = json.loads(open('templates.json').read())
-default_widget_template = "widget"
-
 ###FUNCTIONS
-###FUNCTIONS
-###FUNCTIONS
-def get_template(name : str):
-    if name == None:
-        return f"{default_widget_template}.html"
-    
-    if name in widget_templates:
-        return f"{name}.html"
-    else:
-        return f"{default_widget_template}.html"
 
 def ping(requrl):
     try:
@@ -48,17 +35,17 @@ def removebreak(str : str):
     result = result.replace("</p>", "")
     return result
 
+
 ###WIDGET ROUTE
+
 @app.route("/widget/<requrl>")
 def widget(requrl):
     result = pingresilient(requrl)
 
     motdhtml = removebreak(result.motd.to_html())
 
-    template = get_template(str(request.args.get('widget')))
-    print(template)
     template = render_template(
-        str(template), 
+        "widget.html", 
         img=result.icon, 
         url=requrl, 
         motd=motdhtml, 
@@ -67,8 +54,7 @@ def widget(requrl):
         maxplayers=result.players.max
     )
 
-    headers = {'Content-Type': 'text/html'}
-    return make_response(template, 200, headers)
+    return template
 
 @app.route("/rawping/<requrl>")
 def rawpingendpoint(requrl):
