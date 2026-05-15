@@ -2,7 +2,7 @@ body{
     max-width: 100ch;
 }
 
-a { color:blue } /* Globally */
+a { color:lightblue } /* Globally */
 
 /* Each state */
 

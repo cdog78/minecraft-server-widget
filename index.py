@@ -91,7 +91,7 @@ def generateroute():
 @app.route("/")
 def home():
     return render_template("homepage.html")
-    
+
 
 @app.route("/examplewidget")
 def examplewidget():
@@ -100,4 +100,4 @@ def examplewidget():
     )
 
 
-app.run(port=8081, host="0.0.0.0", debug=False)
+app.run(port=8080, host="0.0.0.0", debug=False)

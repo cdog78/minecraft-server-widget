@@ -3,8 +3,10 @@
         <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
         
         <script src="{{url_for('static', filename='copy.js')}}"></script>
+        <script src="{{url_for('static', filename='fade.js')}}"></script>
     <body>
         {% autoescape false %}
+        
         <div class="columncontainer" onclick="copyUrl('{{url}}', 'copied server url to clipboard')">
             <div class="container">
             
