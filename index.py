@@ -91,10 +91,7 @@ def generateroute():
 @app.route("/")
 def home():
     return render_template("homepage.html")
-
-@app.route("/example")
-def example():
-    return render_template("example.html")
+    
 
 @app.route("/examplewidget")
 def examplewidget():
