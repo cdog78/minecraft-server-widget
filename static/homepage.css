@@ -6,4 +6,4 @@ a { color:lightblue } /* Globally */
 
 /* Each state */
 
-a:visited { text-decoration: none; color:blue; }
+a:visited { text-decoration: none; color: lightblue; }
